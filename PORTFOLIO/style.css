@@ -1,0 +1,378 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #1f242d;
+    font-family: "Poppins", sans-serif;
+    color: white;
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    padding: 25px 10px;
+}
+
+.logo{
+    color : #fff;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 25px;
+    cursor: default;
+    animation: slideLeft 1s ease forwards;
+    opacity : 0;
+}
+
+.navbar a {
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    padding: 0px 16px;
+    font-weight: 600;
+    transition: 0.3s all; 
+    animation: navMenu 1s ease forwards;
+    animation-delay: calc(.2s * var(--i));
+    opacity: 0;
+}
+
+.navbar a:hover,
+.navbar a:active{
+    color: #0ef;
+}
+
+.hero-container{
+    display: flex;
+    padding: 25px 10%;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.info-side h3{
+    font-size: 30px;
+    font-weight: 700;
+    margin: 10px 0;
+    letter-spacing: 1px;
+}
+
+.info-side h1{
+    font-size: 75px;
+    letter-spacing: 1px;
+    font-weight: 700;
+    animation: slideRight 0.5s ease forwards;
+    opacity: 0;
+    animation-delay: 1s;
+    color: #f8f8f8;
+}
+
+.info-side h3 span{
+    color: #0ef;
+}
+
+.part-1{
+    animation: part1 1s ease forwards;
+    opacity: 0;
+}
+
+.part-2{
+    animation: part2 1s ease forwards;
+    opacity: 0;
+}
+
+p{
+    line-height: 27px;
+    margin: 20px 0px 40px 0px;
+    animation: slideLeftP 1s ease forwards;
+    opacity: 0;
+    animation-delay: 1.2s;
+}
+
+.hero-img img{
+    width: 200px;
+    height: 220px;
+    animation: zoomIn 1s ease forwards;
+    animation-delay: 1s;
+    opacity: 0;
+}
+
+i{
+    position: relative;
+    border: 2px solid #0ef;
+    padding: 10px;
+    border-radius: 50%;
+    color: #0ef;
+    margin: 0px 8px;
+    transition: 0.3ms;
+    animation: socialIcons 1s ease forwards;
+    animation-delay: calc(.3s * var(--i));
+    opacity: 0;
+}
+
+i:hover{
+    box-shadow: 0 0 20px #0ef;
+}
+
+button{
+    background-color: #0ef;
+    margin-top: 20px 70px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: .3s;
+    box-shadow: 0 0 15px #0ef;
+    height: 50px;
+    width: 150px;
+    animation: slideUp 1s ease forwards;
+    animation-delay: 1.5s;
+    opacity: 0;
+}
+
+button:hover{
+    box-shadow: none;
+}
+
+.contact-container {
+    width: 80%;
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background: hsl(212, 85%, 75%);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+.contact-container h1 {
+    text-align: center;
+    color: #333;
+}
+
+.contact-container p {
+    font-size: 18px;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #3810c9;
+}
+
+.contact-container ul {
+    list-style: none;
+    padding: 0;
+}
+
+.contact-container ul li {
+    background: #f8f8f8;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    color: #333;
+}
+
+.contact-container a {
+    text-decoration: none;
+    color: #007bff;
+    font-weight: bold;
+}
+
+.contact-container a:hover {
+    text-decoration: underline;
+}
+
+@media (min-width: 768px) {
+    .contact-container {
+        width: 60%;
+    }
+}
+
+
+
+.portfolio-container {
+    width: 80%;
+    max-width: 1000px;
+    margin: 50px auto;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+
+.project {
+    border-bottom: 1px solid #eee;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+}
+
+.project:last-child {
+    border-bottom: none;
+}
+
+.project h2 {
+    color: #007bff;
+}
+
+.project p {
+    line-height: 1.6;
+}
+
+.project img {
+    max-width: 100%;
+    height: auto;
+}
+
+.project-links {
+    margin-top: 15px;
+}
+
+.project-links a {
+    text-decoration: none;
+    color: #007bff;
+    margin-right: 10px;
+}
+
+.project-links a:hover {
+    text-decoration: underline;
+}
+
+.skills-container {
+    width: 80%;
+    max-width: 800px;
+    margin: 50px auto;
+
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+h1 {
+    text-align: center;
+    color: #f8f8f8
+}
+
+.skills-category {
+    margin-bottom: 30px;
+}
+
+.skills-category h2 {
+    color: #007bff;
+    border-bottom: 2px solid #007bff;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+.skills-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.skills-list li {
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.about-container {
+    width: 80%;
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+
+p {
+    line-height: 1.6;
+}
+
+@keyframes slideLeft {
+    0% {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+@keyframes navMenu {
+    0% {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+@keyframes part1 {
+    0% {
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+@keyframes part2 {
+    0% {
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+@keyframes slideRight {
+    0% {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+@keyframes slideLeftP {
+    0% {
+        transform: translateX(100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+@keyframes socialIcons {
+    0% {
+        transform: translateX(100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+@keyframes slideUp {
+    0% {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+@keyframes zoomIn {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
